@@ -1,0 +1,222 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    width: 100%;
+    padding: 20px;
+}
+
+.login-card {
+    background: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.register-card {
+    max-width: 450px;
+}
+
+.register-card input[type="email"] {
+    margin-top: 10px;
+}
+
+.register-card .links {
+    margin-top: 15px;
+}
+
+.register-card .links a {
+    display: block;
+    margin: 5px 0;
+}
+
+h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #ddd;
+    border-radius: 6px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+}
+
+input:focus {
+    border-color: #667eea;
+    outline: none;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background: #667eea;
+    border: none;
+    border-radius: 6px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background: #764ba2;
+}
+
+.links {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.links a {
+    color: #667eea;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 14px;
+}
+
+.links a:hover {
+    text-decoration: underline;
+}
+
+.alert {
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 4px;
+    text-align: center;
+}
+
+.success {
+    background: #d4edda;
+    color: #155724;
+}
+
+.error {
+    background: #f8d7da;
+    color: #721c24;
+}
+
+.login-info {
+    text-align: center;
+    color: #666;
+    font-size: 12px;
+    margin-bottom: 15px;
+}
+
+@media (max-width: 480px) {
+    .login-card {
+        padding: 20px;
+    }
+}
+
+.chat-container {
+    width: 100%;
+    max-width: 800px;
+    height: 90vh;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+}
+
+.chat-header {
+    padding: 20px;
+    border-bottom: 1px solid #eee;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.user-info {
+    font-size: 14px;
+    color: #666;
+}
+
+.messages-container {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+.message {
+    margin-bottom: 15px;
+    padding: 10px;
+    border-radius: 10px;
+    background: #f0f2f5;
+    max-width: 70%;
+}
+
+.my-message {
+    background: #667eea;
+    color: white;
+    margin-left: auto;
+}
+
+.message strong {
+    font-size: 14px;
+}
+
+.message p {
+    margin: 5px 0;
+}
+
+.message small {
+    font-size: 12px;
+    color: #888;
+}
+
+.my-message small {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.message-form {
+    display: flex;
+    padding: 20px;
+    border-top: 1px solid #eee;
+    gap: 10px;
+}
+
+.message-form input {
+    flex: 1;
+}
+
+.message-form button {
+    width: 100px;
+}
+
+.logout-btn {
+    padding: 5px 10px;
+    background: #f8d7da;
+    color: #721c24;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 12px;
+    margin-left: 10px;
+}
+
+.logout-btn:hover {
+    background: #721c24;
+    color: white;
+}

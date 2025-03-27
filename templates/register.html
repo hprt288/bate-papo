@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Criar Conta</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <div class="login-card register-card">
+            <h2>Criar Conta</h2>
+            {% with messages = get_flashed_messages(with_categories=true) %}
+                {% if messages %}
+                    {% for category, message in messages %}
+                        <div class="alert {{ category }}">{{ message }}</div>
+                    {% endfor %}
+                {% endif %}
+            {% endwith %}
+            <form method="POST" action="{{ url_for('register') }}">
+                <div class="form-group">
+                    <input type="text" name="username" required placeholder="Usuário">
+                </div>
+                <div class="form-group">
+                    <input type="email" name="email" required placeholder="E-mail">
+                </div>
+                <div class="form-group">
+                    <input type="password" name="password" required placeholder="Senha">
+                </div>
+                <div class="form-group">
+                    <input type="password" name="confirm_password" required placeholder="Confirmar Senha">
+                </div>
+                <button type="submit">Criar Conta</button>
+            </form>
+            <div class="links">
+                <a href="{{ url_for('login') }}">Já tem uma conta? Faça login</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
